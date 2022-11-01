@@ -1,5 +1,10 @@
 import java.util.Scanner;
 public class SoulmateFinder {
+    public static int Main(){
+        StationStart = TravellerNumber("Where did your journey start?");
+        StationEnd = TravellerNumber("Where did your journey end?");
+
+    }
     public static String TravellerData(String Question) {
         Scanner Data = new Scanner(System.in);
         System.out.println(Question);
@@ -32,9 +37,8 @@ public class SoulmateFinder {
         System.out.println("Enter the overall number of travellers on the train: ");
         int NumberOfTravellers = TravellerInput.nextInt();
         int numberOfSoulmates = 0;
-        int i = 0;
-        boolean found = false;
-        while (i <= NumberOfTravellers && found == false) {
+        int i = 1;
+        while (i <= NumberOfTravellers) {
 
             String Name = TravellerData("Enter the traveller's name:");
 
@@ -50,7 +54,6 @@ public class SoulmateFinder {
 
             }else {
                 System.out.println(Name + " is not the soulmate.");
-                found = true;
             }
 
             i++;
